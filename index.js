@@ -19,9 +19,11 @@ app.use( express.static('public') );
 app.use( express.json() );
 
 // Rutas
+
+const event = require('./routes/events')
 app.use('/api/auth', require('./routes/auth') );
 // TODO: CRUD: Eventos
-
+app.use('/api/events',event)
 
 
 // Escuchar peticiones

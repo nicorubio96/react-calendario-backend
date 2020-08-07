@@ -5,7 +5,7 @@ const dbConnection = async() => {
 
     try {
         
-        await mongoose.connect( 'mongodb://localhost:27017/calendario' , {
+        await mongoose.connect( process.env.DB , {
             useNewUrlParser: true, 
             useUnifiedTopology: true,
             useCreateIndex: true
